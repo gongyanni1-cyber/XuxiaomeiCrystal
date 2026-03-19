@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<title>许小莓企业福利 — 让员工更满意，为企业凝心聚力</title>
+<meta name="description" content="许小莓企业福利平台，深耕企业福利行业十余年，提供多元化量身定制的高品质福利产品与服务。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --orange:#E8820C;--deep-orange:#C46A00;--gold:#F5A623;--amber:#FFC947;
+  --dark:#1A1209;--brown:#3D2B1F;--cream:#FFF9F0;--warm-white:#FFFDF8;
+  --text:#2C1810;--text-light:#7A6855;--border:rgba(200,160,100,.2);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC',-apple-system,"PingFang SC",sans-serif;color:var(--text);background:var(--warm-white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* === HERO === */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#1A1209 0%,#3D2B1F 40%,#5A3A1E 100%)}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 50%,rgba(232,130,12,.25) 0%,transparent 60%),radial-gradient(ellipse at 70% 30%,rgba(245,166,35,.15) 0%,transparent 50%)}
+.hero-inner{position:relative;text-align:center;padding:60px 24px;z-index:2}
+.hero-badge{display:inline-block;padding:6px 20px;border:1px solid rgba(255,201,71,.4);border-radius:30px;color:var(--amber);font-size:12px;letter-spacing:3px;margin-bottom:28px;animation:fadeUp .8s ease both}
+.hero-logo{font-family:'Noto Serif SC',serif;font-size:13vw;font-weight:900;color:white;line-height:1.1;margin-bottom:8px;animation:fadeUp .8s ease .1s both;text-shadow:0 4px 40px rgba(232,130,12,.3)}
+@media(min-width:600px){.hero-logo{font-size:72px}}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.7);font-weight:300;letter-spacing:2px;animation:fadeUp .8s ease .2s both}
+.hero-tagline{margin-top:32px;font-size:14px;color:var(--amber);letter-spacing:1px;animation:fadeUp .8s ease .3s both}
+.hero-scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);font-size:12px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* Decorative circles */
+.hero-circle{position:absolute;border-radius:50%;border:1px solid rgba(245,166,35,.1)}
+.hero-circle:nth-child(1){width:400px;height:400px;top:-100px;right:-100px}
+.hero-circle:nth-child(2){width:300px;height:300px;bottom:-80px;left:-80px}
+.hero-circle:nth-child(3){width:200px;height:200px;top:20%;left:10%;border-color:rgba(232,130,12,.08)}
+
+/* === SECTIONS === */
+section{padding:60px 20px}
+.container{max-width:900px;margin:0 auto}
+.sec-label{display:inline-block;font-size:11px;letter-spacing:3px;color:var(--orange);text-transform:uppercase;margin-bottom:8px;font-weight:700}
+.sec-title{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:700;color:var(--brown);line-height:1.4;margin-bottom:16px}
+.sec-desc{font-size:14px;color:var(--text-light);line-height:1.9;max-width:600px}
+
+/* === ABOUT === */
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-top:32px}
+@media(min-width:600px){.about-grid{grid-template-columns:1fr 1fr}}
+.about-card{background:white;border-radius:16px;padding:28px 24px;border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
+.about-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(60,30,10,.08)}
+.about-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.about-card h4{font-size:15px;font-weight:700;margin-bottom:6px}
+.about-card p{font-size:13px;color:var(--text-light);line-height:1.8}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.stat{text-align:center;padding:20px 10px;background:white;border-radius:14px;border:1px solid var(--border)}
+.stat-num{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:900;background:linear-gradient(135deg,var(--orange),var(--deep-orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-label{font-size:11px;color:var(--text-light);margin-top:4px}
+
+/* === TIMELINE === */
+.timeline{background:var(--warm-white)}
+.tl-track{position:relative;margin-top:36px;padding-left:24px;border-left:2px solid var(--border)}
+.tl-item{position:relative;padding:0 0 32px 24px}
+.tl-item::before{content:'';position:absolute;left:-31px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--orange);border:3px solid var(--warm-white);box-shadow:0 0 0 2px var(--orange)}
+.tl-year{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:var(--orange);margin-bottom:4px}
+.tl-text{font-size:13px;color:var(--text-light);line-height:1.8}
+
+/* === SERVICES === */
+.services{background:linear-gradient(180deg,var(--cream) 0%,var(--warm-white) 100%)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+@media(min-width:600px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc-card{background:white;border-radius:14px;padding:24px 16px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.svc-card:hover{border-color:var(--orange);box-shadow:0 8px 30px rgba(232,130,12,.1)}
+.svc-emoji{font-size:32px;margin-bottom:10px;display:block}
+.svc-card h4{font-size:14px;font-weight:700;margin-bottom:4px}
+.svc-card p{font-size:11px;color:var(--text-light)}
+
+/* === PRODUCTS === */
+.products{background:var(--brown);color:white;position:relative;overflow:hidden}
+.products::before{content:'';position:absolute;top:0;right:0;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(232,130,12,.15),transparent 70%)}
+.products .sec-label{color:var(--amber)}
+.products .sec-title{color:white}
+.products .sec-desc{color:rgba(255,255,255,.6)}
+.prod-scroll{display:flex;gap:14px;margin-top:28px;overflow-x:auto;padding-bottom:16px;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory}
+.prod-scroll::-webkit-scrollbar{height:4px}
+.prod-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px}
+.prod-card{flex:0 0 140px;scroll-snap-align:start;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px 14px;text-align:center;transition:all .3s}
+.prod-card:hover{background:rgba(255,255,255,.14);border-color:var(--orange)}
+.prod-num{font-family:'Noto Serif SC',serif;font-size:28px;font-weight:900;color:var(--amber);line-height:1}
+.prod-card h4{font-size:13px;font-weight:600;margin-top:8px;color:rgba(255,255,255,.9)}
+
+/* === CLIENTS === */
+.clients{background:var(--cream)}
+.client-sectors{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;margin-bottom:28px}
+.sector-tag{padding:6px 14px;border-radius:20px;background:white;border:1px solid var(--border);font-size:12px;color:var(--text-light);font-weight:500}
+.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(min-width:600px){.client-grid{grid-template-columns:repeat(4,1fr)}}
+.client-card{background:white;border-radius:12px;padding:16px 12px;text-align:center;border:1px solid var(--border);transition:all .3s;display:flex;align-items:center;justify-content:center;min-height:70px}
+.client-card:hover{border-color:var(--orange);box-shadow:0 4px 20px rgba(232,130,12,.1)}
+.client-card span{font-size:13px;font-weight:700;color:var(--brown);line-height:1.3}
+
+/* === QUALITY === */
+.quality{background:var(--warm-white)}
+.qual-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
+@media(min-width:600px){.qual-grid{grid-template-columns:1fr 1fr}}
+.qual-card{background:white;border-radius:14px;padding:24px 20px;border:1px solid var(--border)}
+.qual-card h4{font-size:15px;font-weight:700;color:var(--brown);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.qual-card h4::before{content:'';width:4px;height:18px;border-radius:2px;background:var(--orange)}
+.qual-card p{font-size:13px;color:var(--text-light);line-height:1.9}
+
+/* === TOP BAR === */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(26,18,9,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(245,166,35,.15)}
+.top-bar-brand{font-size:14px;font-weight:700;color:white;letter-spacing:1px}
+.top-bar-phone{display:flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--orange),var(--deep-orange));color:white;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;text-decoration:none;letter-spacing:.5px;box-shadow:0 2px 10px rgba(232,130,12,.3)}
+.top-bar-phone:active{opacity:.8}
+.hero{padding-top:48px}
+
+/* === CTA === */
+.cta{background:linear-gradient(135deg,var(--orange) 0%,var(--deep-orange) 100%);text-align:center;color:white;padding:50px 20px;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-50%;right:-20%;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.08)}
+.cta h2{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:700;margin-bottom:12px;position:relative}
+.cta p{font-size:14px;opacity:.85;margin-bottom:24px;position:relative}
+.cta-btn{display:inline-block;padding:14px 36px;background:white;color:var(--orange);border-radius:30px;font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,.15);transition:all .3s;position:relative}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
+
+/* === FOOTER === */
+.footer{background:var(--dark);color:rgba(255,255,255,.4);text-align:center;padding:28px 20px;font-size:11px;line-height:2}
+.footer strong{color:rgba(255,255,255,.7)}
+
+/* === ANIMATIONS === */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* === INDUSTRY EVOLUTION === */
+.evo-bar{display:flex;gap:0;margin-top:28px;border-radius:12px;overflow:hidden}
+.evo-stage{flex:1;padding:20px 14px;text-align:center;position:relative}
+.evo-stage:nth-child(1){background:rgba(232,130,12,.08)}
+.evo-stage:nth-child(2){background:rgba(232,130,12,.15)}
+.evo-stage:nth-child(3){background:rgba(232,130,12,.25)}
+.evo-ver{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:900;color:var(--orange)}
+.evo-stage h4{font-size:12px;font-weight:700;margin:4px 0}
+.evo-stage p{font-size:10px;color:var(--text-light);line-height:1.5}
+
+/* === FLOATING PARTICLES === */
+.particle{position:absolute;border-radius:50%;background:var(--amber);opacity:.1;pointer-events:none}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span class="top-bar-brand">🍓 许小莓</span>
+  <a href="tel:18811046004" class="top-bar-phone">📞 188 1104 6004</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-circle"></div>
+  <div class="hero-circle"></div>
+  <div class="hero-circle"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">ENTERPRISE BENEFIT PLATFORM</div>
+    <div class="hero-logo">许小莓</div>
+    <div class="hero-sub">企 业 福 利 平 台</div>
+    <div class="hero-tagline">🍓 让员工更满意 · 为企业凝心聚力</div>
+  </div>
+  <div class="hero-scroll">↓ 向下滑动了解更多</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="sec-label reveal">ABOUT US</div>
+    <h2 class="sec-title reveal">关于许小莓</h2>
+    <p class="sec-desc reveal">许小莓福利（所属公司：北京爱琪伟业商贸有限公司），深耕企业福利行业十余年，是一家满足企业福利需求的解决方案供应商。通过资源整合与产品迭代，为企业提供多元化量身定制的高品质福利产品与服务。</p>
+    
+    <div class="stats reveal">
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">年行业深耕</div></div>
+      <div class="stat"><div class="stat-num">800+</div><div class="stat-label">服务企业</div></div>
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">专业团队</div></div>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="about-icon">🏢</div>
+        <h4>双配送中心</h4>
+        <p>目前在北京拥有海淀、朝阳两个配送中心，配备4台专业配送车辆及8位经验丰富的配送人员，确保服务快捷可靠。</p>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-icon">🗺️</div>
+        <h4>全国布局</h4>
+        <p>未来将覆盖北京、上海、广州、深圳、成都、武汉、重庆、杭州、南京、西安、长沙等20+城市。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="container">
+    <div class="sec-label reveal">MILESTONES</div>
+    <h2 class="sec-title reveal">十余年行业沉淀</h2>
+    <p class="sec-desc reveal">提供更专业的工会福利方案，促进职工体验升级</p>
+    <div class="tl-track">
+      <div class="tl-item reveal"><div class="tl-year">2014</div><div class="tl-text">公司于北京海淀区开设第一家配送中心</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2015</div><div class="tl-text">蛋糕福利上线，为全版块福利奠定基础</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2016</div><div class="tl-text">启动年节福利业务</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2017</div><div class="tl-text">成为滴滴公司福利供应商，月供额一百万</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2018</div><div class="tl-text">结合企业工作实际需求，推出存储卡</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2019</div><div class="tl-text">第二家许小莓企业配送中心在朝阳区成立</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2022</div><div class="tl-text">积累更加丰富的经验，完善自身资质</div></div>
+      <div class="tl-item reveal"><div class="tl-year">2023</div><div class="tl-text">业务模式日趋成熟，定制化服务，成熟的售后处理方案</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 SERVICES -->
+<section class="services">
+  <div class="container">
+    <div class="sec-label reveal">SERVICES</div>
+    <h2 class="sec-title reveal">六大应用模块</h2>
+    <p class="sec-desc reveal">一站式企业福利服务，覆盖全年各类场景需求</p>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="svc-emoji">☕</span><h4>下午茶</h4><p>精致下午茶配送</p></div>
+      <div class="svc-card reveal"><span class="svc-emoji">🎁</span><h4>职工福利</h4><p>年节福利定制发放</p></div>
+      <div class="svc-card reveal"><span class="svc-emoji">🍰</span><h4>茶歇</h4><p>会议活动茶歇服务</p></div>
+      <div class="svc-card reveal"><span class="svc-emoji">🎂</span><h4>生日会</h4><p>员工生日定制服务</p></div>
+      <div class="svc-card reveal"><span class="svc-emoji">🎉</span><h4>团建茶歇</h4><p>团队活动餐饮配套</p></div>
+      <div class="svc-card reveal"><span class="svc-emoji">🍪</span><h4>茶水间零食</h4><p>日常零食柜补货</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container">
+    <div class="sec-label reveal">PRODUCTS</div>
+    <h2 class="sec-title reveal">全品类福利产品</h2>
+    <p class="sec-desc reveal">跨品类福利资源与服务全覆盖，量身定制个性化体验</p>
+    <div class="prod-scroll">
+      <div class="prod-card"><div class="prod-num">01</div><h4>整果 · 果切</h4></div>
+      <div class="prod-card"><div class="prod-num">02</div><h4>水果捞</h4></div>
+      <div class="prod-card"><div class="prod-num">03</div><h4>鲜果茶饮</h4></div>
+      <div class="prod-card"><div class="prod-num">04</div><h4>烘焙产品</h4></div>
+      <div class="prod-card"><div class="prod-num">05</div><h4>独立包装零食</h4></div>
+      <div class="prod-card"><div class="prod-num">06</div><h4>咖啡茶</h4></div>
+      <div class="prod-card"><div class="prod-num">07</div><h4>饮料奶制品</h4></div>
+      <div class="prod-card"><div class="prod-num">08</div><h4>雪糕</h4></div>
+      <div class="prod-card"><div class="prod-num">09</div><h4>其他定制产品</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY EVOLUTION -->
+<section class="about">
+  <div class="container">
+    <div class="sec-label reveal">INDUSTRY</div>
+    <h2 class="sec-title reveal">福利行业发展历程</h2>
+    <p class="sec-desc reveal">从温饱福利到量身定制个性化福利</p>
+    <div class="evo-bar reveal">
+      <div class="evo-stage">
+        <div class="evo-ver">1.0</div>
+        <h4>1990-2007</h4>
+        <p>米面粮油等刚需<br>传统线下配送</p>
+      </div>
+      <div class="evo-stage">
+        <div class="evo-ver">2.0</div>
+        <h4>2008-2017</h4>
+        <p>资源整合<br>品类升级多样选择</p>
+      </div>
+      <div class="evo-stage">
+        <div class="evo-ver">3.0</div>
+        <h4>2018至今</h4>
+        <p>量身定制个性化<br>职工体验升级</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients">
+  <div class="container">
+    <div class="sec-label reveal">CLIENTS</div>
+    <h2 class="sec-title reveal">服务客户</h2>
+    <p class="sec-desc reveal">覆盖多行业、多领域的企业福利服务</p>
+    <div class="client-sectors reveal">
+      <span class="sector-tag">政府/事业单位</span>
+      <span class="sector-tag">互联网公司</span>
+      <span class="sector-tag">银行金融</span>
+      <span class="sector-tag">区块链企业</span>
+      <span class="sector-tag">教育培训</span>
+      <span class="sector-tag">科技公司</span>
+      <span class="sector-tag">拼车</span>
+      <span class="sector-tag">食品递送</span>
+      <span class="sector-tag">招聘</span>
+      <span class="sector-tag">汽车服务</span>
+      <span class="sector-tag">出版</span>
+      <span class="sector-tag">娱乐</span>
+    </div>
+    <h3 style="font-size:14px;font-weight:700;color:var(--brown);margin-bottom:14px" class="reveal">部分客户示例</h3>
+    <div class="client-grid">
+      <div class="client-card reveal"><span>腾讯<br>Tencent</span></div>
+      <div class="client-card reveal"><span>滴滴</span></div>
+      <div class="client-card reveal"><span>小红书</span></div>
+      <div class="client-card reveal"><span>哔哩哔哩<br>Bilibili</span></div>
+      <div class="client-card reveal"><span>喜马拉雅</span></div>
+      <div class="client-card reveal"><span>云学堂<br>YXT</span></div>
+      <div class="client-card reveal"><span>智联招聘</span></div>
+      <div class="client-card reveal"><span>OUKE<br>欧科</span></div>
+      <div class="client-card reveal"><span>易车网</span></div>
+      <div class="client-card reveal"><span>MDPI</span></div>
+      <div class="client-card reveal"><span>嘀嗒出行</span></div>
+      <div class="client-card reveal"><span>开课吧</span></div>
+      <div class="client-card reveal"><span>北清经管<br>高等研究院</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="quality">
+  <div class="container">
+    <div class="sec-label reveal">GUARANTEE</div>
+    <h2 class="sec-title reveal">品质保障与售后服务</h2>
+    <div class="qual-grid">
+      <div class="qual-card reveal">
+        <h4>供应商准入机制</h4>
+        <p>供应商注册资金、年营业额、企业人员、仓储面积等严格把控。与众多知名国民品牌建立战略合作、深度合作。根据供应商发货情况及供货能力做好淘汰机制，确保每位职工享有最优产品与体验。</p>
+      </div>
+      <div class="qual-card reveal">
+        <h4>食品审核机制</h4>
+        <p>各类商品均需提供加盖供应商公章的有效资信证明、营业执照副本、食品流通许可证、产品检验报告，建立完善的食品安全保障体系。</p>
+      </div>
+      <div class="qual-card reveal">
+        <h4>及时响应售后</h4>
+        <p>区别于行业传统售后赔付周期长、沟通成本高，许小莓实施"及时响应"政策。线上24h在线客服，即时响应用户问题。</p>
+      </div>
+      <div class="qual-card reveal">
+        <h4>全天候客服保障</h4>
+        <p>专属人工客户通道，权威呼叫中心保证99%接通率。老板微信电话7×12h全年无休，保障职工权益。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2 class="reveal">开启您的企业福利之旅</h2>
+  <p class="reveal">许小莓 · 让每一次福利都深入人心</p>
+  <a href="tel:18811046004" class="cta-btn reveal">📞 立即咨询：188 1104 6004</a>
+  <p style="margin-top:16px;font-size:13px;opacity:.8;position:relative" class="reveal">微信同号 · 7×12h 全年无休</p>
+</section>
+
+<!-- CONTACT -->
+<section style="background:var(--brown);padding:36px 20px;text-align:center">
+  <div class="container">
+    <div style="display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:24px 36px">
+      <div style="font-size:13px;color:var(--amber);letter-spacing:2px;margin-bottom:8px">联系我们</div>
+      <div style="font-family:'Noto Serif SC',serif;font-size:28px;font-weight:700;color:white;letter-spacing:2px;margin-bottom:6px">188 1104 6004</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.5)">电话 / 微信同号 · 老板直接对接</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>许小莓企业福利</strong> · 北京爱琪伟业商贸有限公司<br>
+  📞 188 1104 6004（微信同号）<br>
+  深耕企业福利行业十余年 · 让员工更满意 为企业凝心聚力
+</div>
+
+<script>
+// Scroll reveal
+var reveals = document.querySelectorAll('.reveal');
+function checkReveal(){
+  for(var i=0;i<reveals.length;i++){
+    var el=reveals[i];
+    var top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-60){
+      el.classList.add('visible');
+    }
+  }
+}
+window.addEventListener('scroll',checkReveal);
+window.addEventListener('load',checkReveal);
+</script>
+</body>
+</html>
